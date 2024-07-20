@@ -1,0 +1,120 @@
+
+
+//create a user 
+POST http://localhost:5000/users
+Content-Type:application/json
+
+
+{
+    "name":"rohith",
+    "email":"admin@gmail.com",
+    "password":"123456",
+    "confPassword":"123456",
+    "role":"admin" 
+}
+
+###
+//get all users
+
+GET http://localhost:5000/users
+
+###
+//get specific user
+GET http://localhost:5000/users/9752da7d-df99-453d-a47d-99dc6e1801e1
+
+###
+//update user
+PATCH  http://localhost:5000/users/9752da7d-df99-453d-a47d-99dc6e1801e1
+
+Content-Type:application/json
+{
+    "name":"John player",
+    "email":"johndoe123@gmail.com",
+    "password":"",
+    "confPassword":"",
+    "role":"user" 
+}
+
+###
+//update user
+DELETE  http://localhost:5000/users/9752da7d-df99-453d-a47d-99dc6e1801e1
+
+Content-Type:application/json
+{
+    "name":"John player",
+    "email":"johndoe123@gmail.com",
+    "password":"123456",
+    "confPassword":"123456",
+    "role":"user" 
+}
+
+###
+//login user 
+POST http://localhost:5000/login
+Content-Type:application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"123456"
+}
+
+
+###
+//login user 
+POST http://localhost:5000/login
+Content-Type:application/json
+
+
+{
+    "email":"johndoe123@gmail.com",
+    "password":"123456"
+}
+
+
+###
+//ME
+GET  http://localhost:5000/me
+
+###
+//logout
+
+DELETE   http://localhost:5000/logout
+
+
+###
+//create a user 
+POST http://localhost:5000/products
+Content-Type:application/json
+
+{
+    "name":"Product5",
+    "price":878
+}
+
+###
+//Get all products
+GET http://localhost:5000/products    
+
+###
+//Get single product
+GET http://localhost:5000/products/305e033e-1388-4959-a812-2e5e2dabdee3
+
+###
+//update the product
+PATCH  http://localhost:5000/products/50bc200c-48ca-4b07-87d1-852f66d46909
+Content-Type:application/json
+
+{
+    "name":"Product11",
+    "price":145978
+}
+
+###
+//Delete the product
+DELETE   http://localhost:5000/products/50bc200c-48ca-4b07-87d1-852f66d46909
+Content-Type:application/json
+
+{
+    "name":"Product11",
+    "price":145978
+}
